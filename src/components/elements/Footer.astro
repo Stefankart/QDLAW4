@@ -4,6 +4,59 @@ import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
 
+const footerSupport = [
+    {
+        itemText:"Linkedin",
+        itemLink: "https://www.linkedin.com/in/"
+        
+    },
+    {
+        itemText:"Wechat",
+        itemLink:"https://www.linkedin.com/in/"
+    },
+    {
+        itemText:"Whatsapp",
+        itemLink:"https://www.linkedin.com/in/"
+    },
+    {
+        itemText:"Email",
+        itemLink:"#"
+    }
+]
+
+const footerCompany = [
+{
+        itemText:"Linkedin",
+        itemLink: "https://www.linkedin.com/in/"
+        
+    },
+    {
+        itemText:"Wechat",
+        itemLink:"https://www.linkedin.com/in/"
+    },
+    {
+        itemText:"Whatsapp",
+        itemLink:"https://www.linkedin.com/in/"
+    },
+    {
+        itemText:"Email",
+        itemLink:"#"
+    }
+]
+const footerLegal = [
+    {
+        itemText:"Claim",
+        itemLink:"/#"
+    },
+    {
+        itemText:"Privacy",
+        itemLink:"#"
+    },
+    {
+        itemText:"Terms",
+        itemLink:"#"
+    }
+]
 ---
 <div class="mt-16"></div>
 <footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
@@ -48,11 +101,17 @@ import Paragraph from "../shared/Paragraph.astro";
                             <span class="absolute w-2 h-2 rounded-full bg-heading-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
                         </div>
                         <div class="inline-flex text-lg font-semibold text-heading-1">
-                            Your Law Firm Name
+                            AgenceX
                         </div>
                     </a>
                     <Paragraph className={"mt-8"}>
-                        Trusted legal advisors specializing in providing legal solutions for foreigners in China. We understand the unique challenges you face and are here to help.
+                
+                        Your Company Name is a leading law firm specializing in providing expert legal advice and services to foreigners in China. With a team of experienced lawyers who have a deep understanding of Chinese law, we are dedicated to helping our clients navigate the complexities of the legal landscape in China.<br><br>
+                        Address: 123 Main Street, City, Country<br>
+                        Phone: (123) 456-7890<br>
+                        Email: info@yourcompany.com
+            
+
                     </Paragraph>
                 </div>
 
@@ -89,31 +148,11 @@ import Paragraph from "../shared/Paragraph.astro";
             </div>
 
             <GroupFooterNav>
-                
-                <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
-                        <div class="inline-flex text-lg font-semibold text-heading-1">
-                            Contact Information
-                        </div>
-                    </a>
-                    <Paragraph className={"mt-8"}>
-                        <br>
-                        Email: info@example.com
-                        <br>
-                        Phone: (123) 456-7890
-                        <br>
-                        Address: 123 Main St, City, Country
-                        <br>
-                    </Paragraph>
-                </div>
-                
-
-
+                <FooterNav title={"Contact"} navItems={footerCompany}/>
             </GroupFooterNav>
 
             <GroupFooterNav>
-
- 
+                <FooterNav title={"Social"} navItems={footerSupport}/>
             </GroupFooterNav>
 
         </div>
@@ -122,11 +161,10 @@ import Paragraph from "../shared/Paragraph.astro";
         <Container>
             <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> Your Law Firm Name
-                    . All right reserved
+                    &copy; <span id="year"></span> Your Company Name. All rights reserved.
                 </div>
                 <div>
-                    Proudly made by <a href="https://github.com/johnkat-mj" target="_blank" class="font-semibold">DMA</a>
+                    Proudly made by <a href="https://www.linkedin.com/in/stephan-dma/" target="_blank" class="font-semibold">DMA</a>
                 </div>
             </div>
         </Container>
